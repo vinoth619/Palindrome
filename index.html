@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> find palindrome</h1>
+    <input type="text" name="name1" id="ins1">
+    <span id="first"></span> <span id="second"></span>
+    <h1 id="result"></h1>
+    <button onclick="send()">show Result</button>
+    <script>
+       
+
+        function send(){
+            var ins1=document.getElementById("ins1")
+            var c=ins1.value;
+            var first=document.getElementById("first")
+            first.innerHTML=ins1.value;
+             var second=document.getElementById("second")
+             var result=document.getElementById("result")
+                 var j=c.length-1;
+                 console.log(c[0]);
+                 console.log(c[c.length-1])
+             for(var i=0; i<=ins1.value.length;i++){
+                var fn=true;
+                 if(c[i]!==c[j]){
+                    fn=false;
+                    result.innerHTML="not palindrome"
+                    break;
+                }
+                if(fn==true){
+                    j--;
+                    result.innerHTML=" palindrome"
+
+
+                }
+                
+                      
+                    }
+                 
+            }
+
+        
+    </script>
+    
+</body>
+</html>
